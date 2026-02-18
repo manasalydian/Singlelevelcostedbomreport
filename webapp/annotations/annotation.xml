@@ -10,10 +10,10 @@
             <Annotations Target="cds_zsd_singlecostedbom.ZCE_SingleCostedBOMType">
                 <Annotation Term="UI.LineItem">
                     <Collection>
-                        <Record Type="UI.DataField">
+                        <Record Type="UI.DataField"> 
                             <PropertyValue Property="Value" Path="Material"/>
                         </Record>
-                        <Record Type="UI.DataField">
+                        <Record Type="UI.DataField"> 
                             <PropertyValue Property="Label" String="Parent_Desc"/>
                             <PropertyValue Property="Value" Path="product_Desc"/>
                         </Record>
@@ -57,18 +57,17 @@
                             <PropertyValue Property="Label" String="Royalty"/>
                             <PropertyValue Property="Value" Path="Royalty"/>
                         </Record>
+
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Royalty Description"/>
+                            <PropertyValue Property="Value" Path="Royalty_Desc"/>
+                        </Record>
+
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Label" String="RoyAmt"/>
                             <PropertyValue Property="Value" Path="RoyaltyAmount"/>
                         </Record>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Label" String="Freight"/>
-                            <PropertyValue Property="Value" Path="Freight"/>
-                        </Record>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Label" String="Frt"/>
-                            <PropertyValue Property="Value" Path="Freight_Cost"/>
-                        </Record>
+                       
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Label" String="PurchCost"/>
                             <PropertyValue Property="Value" Path="PurchaseCost"/>
@@ -90,7 +89,11 @@
                             <PropertyValue Property="Value" Path="LABFIXOHDCOSTI_1"/>
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Label" String="TOTALCOSTI_1"/>
+                            <PropertyValue Property="Label" String="TTL_COST_OVH"/>
+                            <PropertyValue Property="Value" Path="TTL_COST_OVH"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="TTL_COST_NOOVH"/>
                             <PropertyValue Property="Value" Path="TOTALCOSTI_1"/>
                         </Record>
                         <Record Type="UI.DataField">
@@ -145,17 +148,28 @@
                             <PropertyValue Property="Label" String="Fixed_Overheard"/>
                             <PropertyValue Property="Value" Path="Fixed_Overheard"/>
                         </Record>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Label" String="CalculationMethod"/>
-                            <PropertyValue Property="Value" Path="CalculationMethod"/>
-                        </Record>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Label" String="Amount_or_Percentage"/>
-                            <PropertyValue Property="Value" Path="Amount_or_Percentage"/>
-                        </Record>
+                        
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Label" String="RevisionLevel"/>
                             <PropertyValue Property="Value" Path="RevisionLevel"/>
+                        </Record>
+
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Freight CalMethod"/>
+                            <PropertyValue Property="Value" Path="CalculationMethod"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Freight Amount_OR_Percentage"/>
+                            <PropertyValue Property="Value" Path="Amount_or_Percentage"/>
+                        </Record>
+
+                         <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Freight Description"/>
+                            <PropertyValue Property="Value" Path="Freight"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Frt value"/>
+                            <PropertyValue Property="Value" Path="Freight_Cost"/>
                         </Record>
 
                         //new changes
@@ -167,6 +181,12 @@
                             <PropertyValue Property="Label" String="TariffValue_or_per" />
                             <PropertyValue Property="Value" Path="TariffValue_or_per"/>
                         </Record>
+
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Tariff Description" />
+                            <PropertyValue Property="Value" Path="Tarrif_desc"/>
+                        </Record>
+
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Label" String="TariffValue" />
                             <PropertyValue Property="Value" Path="TariffValue"/>
@@ -176,24 +196,41 @@
                             <PropertyValue Property="Value" Path="RoyaltyCalMethod"/>
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Label" String="RoyaltyValue_or_per" />
+                            <PropertyValue Property="Label" String="{@i18n>royaltyvalueorper}" />
                             <PropertyValue Property="Value" Path="RoyaltyValue_or_per"/>
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Label" String="RoyaltyValue" />
+                            <PropertyValue Property="Label" String="{@i18n>royaltyvalue}" />
                             <PropertyValue Property="Value" Path="RoyaltyValue"/>
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Label" String="SurchargeCalMethod" />
+                            <PropertyValue Property="Label" String="{@i18n>surchargecalmethod}" />
                             <PropertyValue Property="Value" Path="SurchargeCalMethod"/>
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Label" String="SurchargeValue_or_per" />
+                            <PropertyValue Property="Label" String="{@i18n>surchargevalueorper}" />
                             <PropertyValue Property="Value" Path="SurchargeValue_or_per"/>
                         </Record>
+
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Label" String="SurchargeValue" />
+                            <PropertyValue Property="Label" String="{@i18n>surchargeDescription}" />
+                            <PropertyValue Property="Value" Path="Surcharge_desc"/>
+                        </Record>
+
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>surchargevalue}" />
                             <PropertyValue Property="Value" Path="SurchargeValue"/>
+                        </Record>
+                        <!-- <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>period}" />
+                            <PropertyValue Property="Value" Path="period" />
+                        </Record> -->
+
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n>plant}" />
+                            <PropertyValue Property="Value" Path="Plant" >
+                                
+                            </PropertyValue>
                         </Record>
                     </Collection>
                 </Annotation>
